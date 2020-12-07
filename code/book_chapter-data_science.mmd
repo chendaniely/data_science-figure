@@ -1,0 +1,23 @@
+sequenceDiagram
+  The World->>Data: collect data
+  Data->>Processing: manipulate and combine data
+  Processing->>Analysis: gain insites about data
+  Analysis->>Communication: interpret results for others
+  Communication->>Decision: conclustion, decision, or action
+  Decision->>The World: decision affects changes to the environment
+  alt Bias
+    The World->>Data: external forces, data collection
+    Data->>Analysis: technical challenges, mistakes, overlooked
+    Analysis->>Decision: overly complex, missinterpretation
+  else Data Science
+    Data->>Analysis: exploratory data analysis, transform, visualize, model
+    Analysis->>Data: 
+
+    The World->>Analysis: look for additional data sources
+    Analysis->>The World: 
+    
+    Analysis->>Communication: tell an accurate story
+    Communication->>Analysis: 
+    
+    Decision->>The World: consequences
+  end
