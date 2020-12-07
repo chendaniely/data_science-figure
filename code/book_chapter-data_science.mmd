@@ -5,11 +5,12 @@ sequenceDiagram
   Analysis->>Communication: interpret results for others
   Communication->>Decision: conclustion, decision, or action
   Decision->>The World: decision affects changes to the environment
-  alt Bias
+  par Bias
     The World->>Data: external forces, data collection
-    Data->>Analysis: technical challenges, mistakes, overlooked
+    Data->>Analysis: technical challenges, mistakes, overlooked, data leakage
     Analysis->>Decision: overly complex, missinterpretation
-  else Data Science
+  end
+  par Data Science
     Data->>Analysis: exploratory data analysis, transform, visualize, model
     Analysis->>Data: 
 
